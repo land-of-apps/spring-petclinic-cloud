@@ -12,6 +12,7 @@ applications:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
       JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{ enabled: false }'
       SPRING_PROFILES_ACTIVE: cloud
+      JAVA_OPTS: '-javaagent:./workspace/BOOT-INF/lib/appmap-agent-1.27.1.jar'
     services:
       - customers-db
       - config
@@ -30,6 +31,7 @@ applications:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
       JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{ enabled: false }'
       SPRING_PROFILES_ACTIVE: cloud
+      JAVA_OPTS: '-javaagent:./workspace/BOOT-INF/lib/appmap-agent-1.27.1.jar'
     services:
       - vets-db
       - config
@@ -48,6 +50,7 @@ applications:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
       JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{ enabled: false }'
       SPRING_PROFILES_ACTIVE: cloud
+      JAVA_OPTS: '-javaagent:./workspace/BOOT-INF/lib/appmap-agent-1.27.1.jar'
     services:
       - visits-db
       - config
@@ -64,6 +67,7 @@ applications:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
       JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{ enabled: false }'
       SPRING_PROFILES_ACTIVE: cloud
+      JAVA_OPTS: '-javaagent:./workspace/BOOT-INF/lib/appmap-agent-1.27.1.jar'
     services:
       - config
       - registry

@@ -29,6 +29,13 @@
     </properties>
 
 	<dependencies>
+
+		<dependency>
+				<groupId>com.appland</groupId>
+				<artifactId>appmap-agent</artifactId>
+				<version>1.27.1</version>
+				<scope>runtime</scope>
+		</dependency>
 		<!-- Spring Boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
