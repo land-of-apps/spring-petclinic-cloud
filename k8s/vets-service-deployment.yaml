@@ -21,17 +21,17 @@ spec:
       - image: ${REPOSITORY_PREFIX}/spring-petclinic-cloud-vets-service:latest
         name: vets-service
         imagePullPolicy: Always
-        livenessProbe:
-          httpGet:
-            port: 8080
-            path: /actuator/health/liveness
-          initialDelaySeconds: 90
-          periodSeconds: 5
-        readinessProbe:
-          httpGet:
-            port: 8080
-            path: /actuator/health/readiness
-          initialDelaySeconds: 15
+        # livenessProbe:
+        #   httpGet:
+        #     port: 8080
+        #     path: /actuator/health/liveness
+        #   initialDelaySeconds: 90
+        #   periodSeconds: 5
+        # readinessProbe:
+        #   httpGet:
+        #     port: 8080
+        #     path: /actuator/health/readiness
+        #   initialDelaySeconds: 15
         lifecycle:
           preStop:
             exec:

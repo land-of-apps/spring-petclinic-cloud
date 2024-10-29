@@ -276,15 +276,13 @@ visits-service-654fffbcc7-zj2jw      1/1     Running   0          4m2s
 wavefront-proxy-dfbd4b695-fdd6t      1/1     Running   0          14m
 ```
 
-Get the `EXTERNAL-IP` of the API Gateway:
+Forward local port 8888 to the api-gateway so you can reach it from your local machine.
 
 ```bash
-✗ kubectl get svc -n spring-petclinic api-gateway 
-NAME          TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)        AGE
-api-gateway   LoadBalancer   10.7.250.24   34.1.2.22   80:32675/TCP   18m
+kubectl port-forward svc/api-gateway 8888:80 -n spring-petclinic 
 ```
 
-You can now browse to that IP in your browser and see the application running.
+Browse to http://localhost:8888 to access the app
 
 You should also see monitoring and traces from Wavefront under the application name `spring-petclinic-k8s`:
 
