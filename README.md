@@ -236,9 +236,21 @@ Deploy the databases:
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
-helm install vets-db-mysql bitnami/mysql --namespace spring-petclinic --version 8.8.8 --set auth.database=service_instance_db
-helm install visits-db-mysql bitnami/mysql --namespace spring-petclinic  --version 8.8.8 --set auth.database=service_instance_db
-helm install customers-db-mysql bitnami/mysql --namespace spring-petclinic  --version 8.8.8 --set auth.database=service_instance_db
+helm install vets-db-mysql bitnami/mysql --namespace spring-petclinic --version 9.23.0 --set auth.database=service_instance_db
+helm install visits-db-mysql bitnami/mysql --namespace spring-petclinic  --version 9.23.0 --set auth.database=service_instance_db
+helm install customers-db-mysql bitnami/mysql --namespace spring-petclinic  --version 9.23.0 --set auth.database=service_instance_db
+```
+
+Confirm the DBs are running:
+
+```bash
+$ kubectl get pods -n spring-petclinic
+NAME                               READY   STATUS    RESTARTS   AGE
+customers-db-mysql-0               1/1     Running   0          68s
+vets-db-mysql-0                    1/1     Running   0          71s
+visits-db-mysql-0                  1/1     Running   0          70s
+wavefront-proxy-676bf9865d-x76kf   1/1     Running   0          3m35s
+
 ```
 
 ### Deploying the application
