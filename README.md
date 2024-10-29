@@ -284,12 +284,6 @@ kubectl port-forward svc/api-gateway 8888:80 -n spring-petclinic
 
 Browse to http://localhost:8888 to access the app
 
-You should also see monitoring and traces from Wavefront under the application name `spring-petclinic-k8s`:
-
-![Wavefront dashboard screen](./docs/wavefront-k8s.png)
-
-
-
 
 
 ## Starting services locally without Docker
