@@ -1,0 +1,3 @@
+name: spring-petclinic-vets-service
+language: java
+appmap_dir: tmp/appmap
